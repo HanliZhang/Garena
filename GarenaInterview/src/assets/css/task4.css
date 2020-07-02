@@ -13,9 +13,7 @@
     background-image: url('../img/PC.jpg');
     background-size: cover;
 }
-@media screen and (orientation: portrait) {
-    
-  }
+
 @media screen and (orientation: landscape) {
     .imgContainer::after{
         content: " ";
@@ -39,25 +37,16 @@
         z-index: 1000;
         animation: rotate 1s infinite alternate;
     }
+    @keyframes rotate{
+        100%{transform: rotate(-90deg);}
+    }
 }
 
-@keyframes rotate{
-    100%{transform: rotate(-90deg);}
-}
 
 @media screen and (max-width: 1050px){
     .imgContainer{
         background-image: url('../img/ipad.jpg');
     }
-    /* .imgContainer::after{
-        content: " ";
-        width: 100vw;
-        height: 100vh;
-        /* background-color: hsla(0,0,0,0.5); */
-        /* background-color: black;
-        opacity: 0.5;
-        display: inline-block;
-    }  */
 }
 @media screen and (max-width: 650px) {
     .imgContainer{
