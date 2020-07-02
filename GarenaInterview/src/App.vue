@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
 
 <script>
+import Task4 from './components/Task4'
 export default {
-  name: 'App'
+  name: 'App',
+  component: {
+    Task4
+  }
 }
 </script>
 

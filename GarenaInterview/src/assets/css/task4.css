@@ -1,0 +1,33 @@
+#task4Container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgContainer{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../img/PC.jpg');
+}
+@media screen and (max-width: 1050px){
+    .imgContainer{
+        background-image: url('../img/ipad.jpg');
+    }
+    .imgContainer::after{
+        content: " ";
+        width: 100vw;
+        height: 100vh;
+        /* background-color: hsla(0,0,0,0.5); */
+        background-color: black;
+        opacity: 0.5;
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 650px) {
+    .imgContainer{
+        background-image: url('../img/moblie.png');
+    }
+}
