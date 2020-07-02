@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <router-link to='/task4'>To task4</router-link>
+    <h2 id="result"></h2>
   </div>
 </template>
 
@@ -11,6 +12,18 @@ export default {
   data () {
     return {
       msg: 'Hanli Zhang 2020/7/2'
+    }
+  },
+  created:{
+    f1 () {
+      var xhr = new XMLHttpRequest()
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          document.getElementById('result').innerHTML = xhr.responseText
+        }
+      }
+      xhr.open('get', 'http://localhost:8888', true)
+      xhr.send(null)
     }
   }
 }
