@@ -14,7 +14,7 @@ export default {
       msg: 'Hanli Zhang 2020/7/2'
     }
   },
-  created:{
+  created: {
     f1 () {
       var xhr = new XMLHttpRequest()
       xhr.onreadystatechange = function () {
