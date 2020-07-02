@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <router-link to='/task4'>To task4</router-link>
+    <h3>The AJAX code is in HelloWorld.vue and assets/js/nodeTest.js</h3>
     <h2 id="result"></h2>
   </div>
 </template>
@@ -44,5 +45,11 @@ li {
 }
 a {
   color: #42b983;
+}
+.hello{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 </style>
